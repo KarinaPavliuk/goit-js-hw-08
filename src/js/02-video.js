@@ -6,7 +6,7 @@ const player = new Player(iframe);
 const currentTime = localStorage.getItem('videoplayer-current-time');
 
 if (currentTime) {
-  player.setCurrentTime(currentTime);
+  player.setCurrentTime(currentTime || 0);
 }
 
 player.on(

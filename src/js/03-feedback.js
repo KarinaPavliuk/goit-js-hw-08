@@ -25,6 +25,11 @@ if (lastInput) {
 
 formEl.addEventListener('submit', event => {
   event.preventDefault();
+
+  if (formEl.email.value === '' || formEl.message.value === '') {
+    return alert('Please fill in all the fields!');
+  }
+
   localStorage.removeItem('feedback-form-state');
   console.log({
     email: formEl.email.value,
